@@ -8,18 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <script>
-        function loadPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("content").innerHTML = data;
-                })
-                .catch(error => console.error("Gagal memuat halaman:", error));
-        }
-    </script>
-
     <div class="cursor-highlight"></div>
 
     <header>
