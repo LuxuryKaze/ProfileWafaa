@@ -1,0 +1,242 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    background: url('https://i.pinimg.com/originals/4a/a3/76/4aa3764eaffcfac8ffcefc42e50a92e6.gif') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* About Me Section */
+.about {
+    background-color: #10224a;
+    padding: 50px 0;
+}
+
+.about2 {
+    background-color: #111   ;
+    padding: 50px 0;
+}
+
+.about3 {
+    background-color: #10224a   ;
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.text h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.text p {
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #FFFF;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/* Section Lokasi */
+.location {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.location h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.location p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.map-frame {
+    position: relative;
+    width: 650px; /* Sesuaikan dengan ukuran peta */
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('https://64.media.tumblr.com/b3d822cc3551fd2e626ed2755b4c6806/tumblr_mwmodj66i71sk1rjvo1_500.gif'); /* Ganti dengan gambar pohon kamu */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.contact {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contact-btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+        background-color: white;
+        color: black;
+}
+.documentation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.documentation h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.doc-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.doc-gallery img {
+    width: 100%;
+    height: 100%;
+    max-height: 250px; /* Batasi tinggi agar tetap proporsional */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.doc-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* cursor */
+.contact-btn:hover {
+    background-color: white;
+    color: black;
+}
+.cursor-highlight {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 20, 147, 0.3); /* Warna pink transparan */
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.6); /* Efek cahaya pink */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+}

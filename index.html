@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wafa Alziran - Profile Page</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script>
+        function loadPage(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("content").innerHTML = data;
+                })
+                .catch(error => console.error("Gagal memuat halaman:", error));
+        }
+    </script>
+
+    <div class="cursor-highlight"></div>
+
+    <header>
+        <div class="logo">Profile</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html" onclick="loadPage('homepage.html')">Home</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="pengalaman.html">Pengalaman</a></li>
+                <li><a href="pendidikan.html">Pendidikan</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Wafa Alziran Profile Page</h1>
+            <p>"Kebebasan dijamin bukan dengan memenuhi keinginan, tetapi dengan menghilangkan keinginan."</p>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Daftar Isi</h2>
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Tentang Saya</h3>
+                <p>Memuat data dan informasi sesuai dengan data yang ada dan bisa diakses secara umum oleh semua orang melalui navigasi yang ada berikut ini</p>
+                <a href="/html/aboutme.html" class="footer-btn">Tentang Saya</a>
+            </div>
+            <div class="footer-box">
+                <h3>Pengalaman</h3>
+                <p>Pengalaman ini memuat informasi umum tentang hal-hal yang sudah saya lalui atau jalani sebagai organisasi atau sebuah kelompok di dalam lingkungan siswa sekolah maupun bukan</p>
+                <a href="/html/pengalaman.html" class="footer-btn">Pengalaman</a>
+            </div>
+            <div class="footer-box">
+                <h3>Pendidikan</h3>
+                <p>Pengalaman ini memuat data dan informasi dalam hal jenjang pendidikan yang sudah dilalui</p>
+                <a href="/html/pendidikan.html" class="footer-btn">Pendidikan</a>
+            </div>
+        </div>
+        <div class="contact">
+    <a href="contact.html" class="contact-btn">Contact</a>
+            </div>
+    </footer>
+
+    <script>
+        document.addEventListener("mousemove", (e) => {
+    const cursor = document.querySelector(".cursor-highlight");
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+});
+    </script>
+</body>
+</html>
